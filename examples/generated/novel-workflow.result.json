@@ -1,0 +1,122 @@
+{
+  "as_of": "2026-08-30",
+  "audit_id": "synthetic-novel-workflow-2026-08-30",
+  "base_recommendation": "prioritize",
+  "coverage": 1.0,
+  "criteria": [
+    {
+      "confidence": 1.0,
+      "criterion_id": "scouting.workflow_delta",
+      "dimension": "Workflow Delta",
+      "earned_points": 25.0,
+      "evidence_count": 1,
+      "note": "Synthetic example; investigation priority is not an adoption verdict.",
+      "rating": 4,
+      "state": "observed",
+      "weight": 25.0
+    },
+    {
+      "confidence": 1.0,
+      "criterion_id": "scouting.engineering_evidence",
+      "dimension": "Engineering Evidence",
+      "earned_points": 15.0,
+      "evidence_count": 1,
+      "note": "Synthetic example; investigation priority is not an adoption verdict.",
+      "rating": 3,
+      "state": "observed",
+      "weight": 20.0
+    },
+    {
+      "confidence": 0.67,
+      "criterion_id": "scouting.practical_usability",
+      "dimension": "Practical Usability",
+      "earned_points": 15.0,
+      "evidence_count": 1,
+      "note": "Synthetic example; investigation priority is not an adoption verdict.",
+      "rating": 3,
+      "state": "observed",
+      "weight": 20.0
+    },
+    {
+      "confidence": 0.67,
+      "criterion_id": "scouting.maturity_risk",
+      "dimension": "Maturity & Risk",
+      "earned_points": 7.5,
+      "evidence_count": 1,
+      "note": "Synthetic example; investigation priority is not an adoption verdict.",
+      "rating": 2,
+      "state": "observed",
+      "weight": 15.0
+    },
+    {
+      "confidence": 0.67,
+      "criterion_id": "scouting.future_leverage",
+      "dimension": "Future Leverage",
+      "earned_points": 10.0,
+      "evidence_count": 1,
+      "note": "Synthetic example; investigation priority is not an adoption verdict.",
+      "rating": 4,
+      "state": "observed",
+      "weight": 10.0
+    },
+    {
+      "confidence": 0.67,
+      "criterion_id": "scouting.novelty",
+      "dimension": "Novelty",
+      "earned_points": 7.5,
+      "evidence_count": 1,
+      "note": "Synthetic example; investigation priority is not an adoption verdict.",
+      "rating": 3,
+      "state": "observed",
+      "weight": 10.0
+    }
+  ],
+  "dimensions": {
+    "Engineering Evidence": {
+      "coverage": 1.0,
+      "earned_points": 15.0,
+      "weight": 20.0
+    },
+    "Future Leverage": {
+      "coverage": 1.0,
+      "earned_points": 10.0,
+      "weight": 10.0
+    },
+    "Maturity & Risk": {
+      "coverage": 1.0,
+      "earned_points": 7.5,
+      "weight": 15.0
+    },
+    "Novelty": {
+      "coverage": 1.0,
+      "earned_points": 7.5,
+      "weight": 10.0
+    },
+    "Practical Usability": {
+      "coverage": 1.0,
+      "earned_points": 15.0,
+      "weight": 20.0
+    },
+    "Workflow Delta": {
+      "coverage": 1.0,
+      "earned_points": 25.0,
+      "weight": 25.0
+    }
+  },
+  "evidence_confidence": 0.8185,
+  "gate_caps": [],
+  "observed_quality": 80.0,
+  "profile": "innovation-scouting",
+  "recommendation": "prioritize",
+  "repository": "synthetic-labs/novel-workflow",
+  "schema_version": 1,
+  "score": 80.0,
+  "warnings": [
+    "scouting.workflow_delta: rating relies on one evidence item",
+    "scouting.engineering_evidence: rating relies on one evidence item",
+    "scouting.practical_usability: rating relies on one evidence item",
+    "scouting.maturity_risk: rating relies on one evidence item",
+    "scouting.future_leverage: rating relies on one evidence item",
+    "scouting.novelty: rating relies on one evidence item"
+  ]
+}

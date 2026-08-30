@@ -1,0 +1,231 @@
+{
+  "$defs": {
+    "evidence": {
+      "additionalProperties": false,
+      "properties": {
+        "confidence": {
+          "enum": [
+            "low",
+            "medium",
+            "high"
+          ],
+          "type": "string"
+        },
+        "independence_group": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "locator": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "observed_at": {
+          "format": "date",
+          "type": "string"
+        },
+        "source_type": {
+          "enum": [
+            "repository_file",
+            "release",
+            "commit",
+            "issue_or_pr",
+            "security_advisory",
+            "package_registry",
+            "independent_adoption",
+            "sandbox_test",
+            "manual_observation",
+            "automated_observation",
+            "other"
+          ],
+          "type": "string"
+        },
+        "summary": {
+          "minLength": 12,
+          "type": "string"
+        }
+      },
+      "required": [
+        "source_type",
+        "locator",
+        "observed_at",
+        "summary",
+        "confidence"
+      ],
+      "type": "object"
+    },
+    "gate": {
+      "additionalProperties": false,
+      "properties": {
+        "evidence": {
+          "items": {
+            "$ref": "#/$defs/evidence"
+          },
+          "type": "array"
+        },
+        "notes": {
+          "type": "string"
+        },
+        "rationale": {
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "pass",
+            "fail",
+            "unknown",
+            "not_applicable"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "status",
+        "evidence"
+      ],
+      "type": "object"
+    },
+    "rating": {
+      "additionalProperties": false,
+      "properties": {
+        "evidence": {
+          "items": {
+            "$ref": "#/$defs/evidence"
+          },
+          "type": "array"
+        },
+        "notes": {
+          "type": "string"
+        },
+        "rating": {
+          "maximum": 4,
+          "minimum": 0,
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "rationale": {
+          "type": "string"
+        },
+        "state": {
+          "enum": [
+            "observed",
+            "unknown",
+            "not_applicable"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "state",
+        "rating",
+        "evidence"
+      ],
+      "type": "object"
+    }
+  },
+  "$id": "https://example.org/open-source-audit/audit.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "properties": {
+    "as_of": {
+      "format": "date",
+      "type": "string"
+    },
+    "audit_id": {
+      "pattern": "^[a-z0-9][a-z0-9._-]{1,127}$",
+      "type": "string"
+    },
+    "auditor": {
+      "additionalProperties": true,
+      "properties": {
+        "name": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "type": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "type",
+        "name"
+      ],
+      "type": "object"
+    },
+    "context": {
+      "additionalProperties": true,
+      "properties": {
+        "environment": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "risk_tolerance": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "time_budget": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "use_case": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "use_case",
+        "risk_tolerance",
+        "environment",
+        "time_budget"
+      ],
+      "type": "object"
+    },
+    "gates": {
+      "additionalProperties": {
+        "$ref": "#/$defs/gate"
+      },
+      "type": "object"
+    },
+    "next_verification": {
+      "items": {
+        "minLength": 12,
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "profile": {
+      "minLength": 2,
+      "type": "string"
+    },
+    "ratings": {
+      "additionalProperties": {
+        "$ref": "#/$defs/rating"
+      },
+      "minProperties": 1,
+      "type": "object"
+    },
+    "repository": {
+      "pattern": "^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$",
+      "type": "string"
+    },
+    "schema_version": {
+      "const": 1
+    }
+  },
+  "required": [
+    "schema_version",
+    "audit_id",
+    "repository",
+    "as_of",
+    "profile",
+    "auditor",
+    "context",
+    "ratings",
+    "gates",
+    "next_verification"
+  ],
+  "title": "Open Source Audit",
+  "type": "object"
+}

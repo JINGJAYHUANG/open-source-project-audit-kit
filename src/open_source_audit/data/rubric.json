@@ -1,0 +1,419 @@
+{
+  "evidence_confidence": {
+    "high": 1.0,
+    "low": 0.34,
+    "medium": 0.67
+  },
+  "gate_statuses": [
+    "pass",
+    "fail",
+    "unknown",
+    "not_applicable"
+  ],
+  "gates": [
+    {
+      "fail_cap": "avoid",
+      "id": "license_permission_clear",
+      "profiles": [
+        "adoption-readiness"
+      ],
+      "question": "Is the intended use, modification, and redistribution legally permitted under an identifiable license stack?",
+      "unknown_cap": "watch"
+    },
+    {
+      "fail_cap": "avoid",
+      "id": "no_unmitigated_critical_security_finding",
+      "profiles": [
+        "adoption-readiness"
+      ],
+      "question": "Does the scoped evidence show no unresolved critical finding relevant to the intended deployment?",
+      "unknown_cap": "pilot"
+    },
+    {
+      "fail_cap": "avoid",
+      "id": "privileged_defaults_bounded",
+      "profiles": [
+        "adoption-readiness"
+      ],
+      "question": "Are privileged operations disabled, scoped, or explicitly approved by default?",
+      "unknown_cap": "pilot"
+    },
+    {
+      "fail_cap": "watch",
+      "id": "installation_reversible",
+      "profiles": [
+        "adoption-readiness"
+      ],
+      "question": "Can the project be tested and removed without contaminating the primary environment?",
+      "unknown_cap": "pilot"
+    },
+    {
+      "fail_cap": "avoid",
+      "id": "context_fit_confirmed",
+      "profiles": [
+        "adoption-readiness"
+      ],
+      "question": "Has compatibility with the actual use case, data, platform, and risk tolerance been demonstrated?",
+      "unknown_cap": "watch"
+    },
+    {
+      "fail_cap": "deprioritize",
+      "id": "claims_traceable",
+      "profiles": [
+        "innovation-scouting"
+      ],
+      "question": "Are material popularity, adoption, performance, or novelty claims tied to dated evidence?",
+      "unknown_cap": "watch"
+    }
+  ],
+  "profiles": {
+    "adoption-readiness": {
+      "criteria": [
+        {
+          "dimension": "Provenance",
+          "evidence_expectations": [
+            "repository metadata",
+            "package metadata",
+            "maintainer or organization identity"
+          ],
+          "id": "provenance.identity",
+          "question": "Are ownership, origin, package identity, and official distribution channels clear?",
+          "weight": 5
+        },
+        {
+          "dimension": "Provenance",
+          "evidence_expectations": [
+            "version control history",
+            "tag or release mapping",
+            "dated source links"
+          ],
+          "id": "provenance.source_traceability",
+          "question": "Can releases, documentation, and material claims be traced to versioned source?",
+          "weight": 5
+        },
+        {
+          "dimension": "License",
+          "evidence_expectations": [
+            "LICENSE file",
+            "SPDX identifier",
+            "package metadata"
+          ],
+          "id": "license.spdx_clarity",
+          "question": "Is the repository license identifiable and consistent across source and package metadata?",
+          "weight": 6
+        },
+        {
+          "dimension": "License",
+          "evidence_expectations": [
+            "dependency manifest",
+            "third-party notices",
+            "license compatibility review"
+          ],
+          "id": "license.dependency_compatibility",
+          "question": "Are dependency and bundled-asset licenses documented sufficiently for the intended use?",
+          "weight": 4
+        },
+        {
+          "dimension": "Maintenance",
+          "evidence_expectations": [
+            "dated commits or releases",
+            "issue response sample",
+            "security advisory handling"
+          ],
+          "id": "maintenance.recency_response",
+          "question": "Does the project show current maintenance and reasonable response to defects or security reports?",
+          "weight": 7
+        },
+        {
+          "dimension": "Maintenance",
+          "evidence_expectations": [
+            "maintainer set",
+            "governance policy",
+            "ownership or succession evidence"
+          ],
+          "id": "maintenance.bus_factor_governance",
+          "question": "Is continuity supported by more than one undocumented individual or by explicit governance?",
+          "weight": 5
+        },
+        {
+          "dimension": "Documentation",
+          "evidence_expectations": [
+            "quickstart",
+            "minimal example",
+            "versioned commands"
+          ],
+          "id": "documentation.quickstart",
+          "question": "Can a new evaluator install and exercise the core path from owned documentation?",
+          "weight": 6
+        },
+        {
+          "dimension": "Documentation",
+          "evidence_expectations": [
+            "limitations",
+            "compatibility matrix",
+            "migration or uninstall guidance"
+          ],
+          "id": "documentation.operational_limits",
+          "question": "Are limitations, supported versions, data boundaries, upgrade, and removal paths stated?",
+          "weight": 6
+        },
+        {
+          "dimension": "Quality",
+          "evidence_expectations": [
+            "test suite",
+            "CI evidence",
+            "negative or regression tests"
+          ],
+          "id": "quality.tests_ci",
+          "question": "Do tests and CI cover the core behavior and important failure paths?",
+          "weight": 7
+        },
+        {
+          "dimension": "Quality",
+          "evidence_expectations": [
+            "tag-to-source mapping",
+            "checksums or provenance",
+            "repeatable build evidence"
+          ],
+          "id": "quality.release_reproducibility",
+          "question": "Can a release be tied to source and rebuilt or verified with integrity metadata?",
+          "weight": 7
+        },
+        {
+          "dimension": "Security",
+          "evidence_expectations": [
+            "SECURITY policy",
+            "threat model",
+            "known limitations"
+          ],
+          "id": "security.policy_disclosure",
+          "question": "Are security reporting, threat boundaries, and known limitations documented?",
+          "weight": 6
+        },
+        {
+          "dimension": "Security",
+          "evidence_expectations": [
+            "permission inventory",
+            "safe defaults",
+            "approval or sandbox boundary"
+          ],
+          "id": "security.permission_surface",
+          "question": "Are filesystem, network, account, subprocess, and privileged permissions explicit and minimized?",
+          "weight": 5
+        },
+        {
+          "dimension": "Security",
+          "evidence_expectations": [
+            "pinned actions",
+            "locked build dependencies",
+            "artifact verification"
+          ],
+          "id": "security.supply_chain_controls",
+          "question": "Are third-party actions, build inputs, and release dependencies pinned or otherwise controlled?",
+          "weight": 4
+        },
+        {
+          "dimension": "Architecture",
+          "evidence_expectations": [
+            "architecture documentation",
+            "module boundaries",
+            "extension interface"
+          ],
+          "id": "architecture.modularity_extensibility",
+          "question": "Is the architecture understandable, bounded, and extensible without modifying unrelated core behavior?",
+          "weight": 6
+        },
+        {
+          "dimension": "Dependencies",
+          "evidence_expectations": [
+            "dependency files",
+            "update policy",
+            "secret isolation"
+          ],
+          "id": "dependencies.hygiene_update_path",
+          "question": "Are dependencies minimal, reviewable, updateable, and separable from secrets or runtime state?",
+          "weight": 6
+        },
+        {
+          "dimension": "Community",
+          "evidence_expectations": [
+            "CONTRIBUTING",
+            "support policy",
+            "governance or code ownership"
+          ],
+          "id": "community.support_governance",
+          "question": "Are contribution, support, conduct, and decision processes sufficient for the expected dependency?",
+          "weight": 7
+        },
+        {
+          "dimension": "Adoption",
+          "evidence_expectations": [
+            "independent adoption evidence",
+            "downstream references",
+            "dated usage signals"
+          ],
+          "id": "adoption.evidence",
+          "question": "Is real use supported by evidence beyond stars, marketing language, or one source?",
+          "weight": 4
+        },
+        {
+          "dimension": "Fit",
+          "evidence_expectations": [
+            "pilot result",
+            "operating cost",
+            "migration and exit cost"
+          ],
+          "id": "fit.integration_cost",
+          "question": "Is integration effort proportionate to the value for this specific use case?",
+          "weight": 4
+        }
+      ],
+      "purpose": "Evaluate whether a repository is suitable for a bounded pilot or production adoption in a stated context.",
+      "recommendation_order": [
+        "avoid",
+        "watch",
+        "pilot",
+        "adopt"
+      ],
+      "thresholds": [
+        {
+          "label": "adopt",
+          "minimum_confidence": 0.7,
+          "minimum_coverage": 0.85,
+          "minimum_score": 82
+        },
+        {
+          "label": "pilot",
+          "minimum_confidence": 0.55,
+          "minimum_coverage": 0.65,
+          "minimum_score": 65
+        },
+        {
+          "label": "watch",
+          "minimum_confidence": 0.35,
+          "minimum_coverage": 0.4,
+          "minimum_score": 40
+        },
+        {
+          "label": "avoid",
+          "minimum_confidence": 0,
+          "minimum_coverage": 0,
+          "minimum_score": 0
+        }
+      ],
+      "title": "Adoption Readiness"
+    },
+    "innovation-scouting": {
+      "criteria": [
+        {
+          "dimension": "Workflow Delta",
+          "evidence_expectations": [
+            "before/after workflow",
+            "measurable friction removed",
+            "new coordination pattern"
+          ],
+          "id": "scouting.workflow_delta",
+          "question": "Does the project materially change a workflow rather than merely repackage familiar functionality?",
+          "weight": 25
+        },
+        {
+          "dimension": "Engineering Evidence",
+          "evidence_expectations": [
+            "source and tests",
+            "release evidence",
+            "independent technical use"
+          ],
+          "id": "scouting.engineering_evidence",
+          "question": "Is the claimed capability supported by code, tests, releases, or credible adoption evidence?",
+          "weight": 20
+        },
+        {
+          "dimension": "Practical Usability",
+          "evidence_expectations": [
+            "quickstart",
+            "demo result",
+            "known setup burden"
+          ],
+          "id": "scouting.practical_usability",
+          "question": "Can a qualified evaluator reach a meaningful result in a bounded sandbox?",
+          "weight": 20
+        },
+        {
+          "dimension": "Maturity & Risk",
+          "evidence_expectations": [
+            "maintenance signals",
+            "license",
+            "security and permission review"
+          ],
+          "id": "scouting.maturity_risk",
+          "question": "Are maintenance, license, permissions, supply-chain, and failure boundaries sufficiently controlled?",
+          "weight": 15
+        },
+        {
+          "dimension": "Future Leverage",
+          "evidence_expectations": [
+            "reuse path",
+            "extension path",
+            "assetization logic"
+          ],
+          "id": "scouting.future_leverage",
+          "question": "Could the capability become a reusable asset, platform primitive, or durable organizational advantage?",
+          "weight": 10
+        },
+        {
+          "dimension": "Novelty",
+          "evidence_expectations": [
+            "comparison with alternatives",
+            "mechanism-level novelty",
+            "disconfirming evidence"
+          ],
+          "id": "scouting.novelty",
+          "question": "Is the novelty substantive and decision-relevant rather than branding or temporary attention?",
+          "weight": 10
+        }
+      ],
+      "purpose": "Rank projects for investigation without mistaking popularity for adoption readiness or expected returns.",
+      "recommendation_order": [
+        "deprioritize",
+        "watch",
+        "investigate",
+        "prioritize"
+      ],
+      "thresholds": [
+        {
+          "label": "prioritize",
+          "minimum_confidence": 0.65,
+          "minimum_coverage": 0.8,
+          "minimum_score": 80
+        },
+        {
+          "label": "investigate",
+          "minimum_confidence": 0.5,
+          "minimum_coverage": 0.6,
+          "minimum_score": 60
+        },
+        {
+          "label": "watch",
+          "minimum_confidence": 0.35,
+          "minimum_coverage": 0.4,
+          "minimum_score": 40
+        },
+        {
+          "label": "deprioritize",
+          "minimum_confidence": 0,
+          "minimum_coverage": 0,
+          "minimum_score": 0
+        }
+      ],
+      "title": "Innovation Scouting"
+    }
+  },
+  "rating_scale": {
+    "0": "Absent, contradicted, or materially unsafe for the stated criterion.",
+    "1": "Weak evidence or an early, incomplete implementation.",
+    "2": "Partial evidence with meaningful gaps or manual dependence.",
+    "3": "Solid evidence suitable for a bounded pilot or normal use.",
+    "4": "Strong, independently checkable evidence with clear operating limits."
+  },
+  "schema_version": 1
+}

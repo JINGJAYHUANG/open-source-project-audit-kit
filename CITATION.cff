@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If this audit methodology or software supports your work, cite the repository."
+title: "Open Source Project Audit Kit"
+type: software
+authors:
+  - family-names: "Huang"
+    given-names: "Jingjie"
+repository-code: "https://github.com/JINGJAYHUANG/open-source-project-audit-kit"
+url: "https://github.com/JINGJAYHUANG/open-source-project-audit-kit"
+version: "0.1.0"
+date-released: "2026-08-30"
+license: MIT

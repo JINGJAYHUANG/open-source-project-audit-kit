@@ -1,0 +1,131 @@
+{
+  "as_of": "2026-08-30",
+  "audit_id": "synthetic-novel-workflow-2026-08-30",
+  "auditor": {
+    "name": "Open Source Project Audit Kit",
+    "type": "synthetic-example"
+  },
+  "context": {
+    "environment": "disposable research sandbox",
+    "risk_tolerance": "moderate",
+    "time_budget": "one day",
+    "use_case": "Rank a synthetic workflow tool for a bounded technical investigation."
+  },
+  "disclosure": "All entities and evidence in this file are synthetic.",
+  "gates": {
+    "claims_traceable": {
+      "evidence": [
+        {
+          "confidence": "high",
+          "independence_group": "synthetic-claims",
+          "locator": "https://example.org/novel-workflow/claims",
+          "observed_at": "2026-08-30",
+          "source_type": "manual_observation",
+          "summary": "Synthetic popularity and novelty claims are tied to dated evidence records."
+        }
+      ],
+      "notes": "Synthetic gate demonstration.",
+      "status": "pass"
+    }
+  },
+  "next_verification": [
+    "Run the core workflow in a disposable environment.",
+    "Compare the mechanism with mature alternatives.",
+    "Complete an adoption-readiness audit before any production use."
+  ],
+  "profile": "innovation-scouting",
+  "ratings": {
+    "scouting.engineering_evidence": {
+      "evidence": [
+        {
+          "confidence": "high",
+          "independence_group": "synthetic-scouting.engineering_evidence",
+          "locator": "https://example.org/novel-workflow/scouting.engineering_evidence",
+          "observed_at": "2026-08-30",
+          "source_type": "manual_observation",
+          "summary": "Synthetic evidence supporting the scouting.engineering_evidence scouting assessment."
+        }
+      ],
+      "notes": "Synthetic example; investigation priority is not an adoption verdict.",
+      "rating": 3,
+      "state": "observed"
+    },
+    "scouting.future_leverage": {
+      "evidence": [
+        {
+          "confidence": "medium",
+          "independence_group": "synthetic-scouting.future_leverage",
+          "locator": "https://example.org/novel-workflow/scouting.future_leverage",
+          "observed_at": "2026-08-30",
+          "source_type": "manual_observation",
+          "summary": "Synthetic evidence supporting the scouting.future_leverage scouting assessment."
+        }
+      ],
+      "notes": "Synthetic example; investigation priority is not an adoption verdict.",
+      "rating": 4,
+      "state": "observed"
+    },
+    "scouting.maturity_risk": {
+      "evidence": [
+        {
+          "confidence": "medium",
+          "independence_group": "synthetic-scouting.maturity_risk",
+          "locator": "https://example.org/novel-workflow/scouting.maturity_risk",
+          "observed_at": "2026-08-30",
+          "source_type": "manual_observation",
+          "summary": "Synthetic evidence supporting the scouting.maturity_risk scouting assessment."
+        }
+      ],
+      "notes": "Synthetic example; investigation priority is not an adoption verdict.",
+      "rating": 2,
+      "state": "observed"
+    },
+    "scouting.novelty": {
+      "evidence": [
+        {
+          "confidence": "medium",
+          "independence_group": "synthetic-scouting.novelty",
+          "locator": "https://example.org/novel-workflow/scouting.novelty",
+          "observed_at": "2026-08-30",
+          "source_type": "manual_observation",
+          "summary": "Synthetic evidence supporting the scouting.novelty scouting assessment."
+        }
+      ],
+      "notes": "Synthetic example; investigation priority is not an adoption verdict.",
+      "rating": 3,
+      "state": "observed"
+    },
+    "scouting.practical_usability": {
+      "evidence": [
+        {
+          "confidence": "medium",
+          "independence_group": "synthetic-scouting.practical_usability",
+          "locator": "https://example.org/novel-workflow/scouting.practical_usability",
+          "observed_at": "2026-08-30",
+          "source_type": "manual_observation",
+          "summary": "Synthetic evidence supporting the scouting.practical_usability scouting assessment."
+        }
+      ],
+      "notes": "Synthetic example; investigation priority is not an adoption verdict.",
+      "rating": 3,
+      "state": "observed"
+    },
+    "scouting.workflow_delta": {
+      "evidence": [
+        {
+          "confidence": "high",
+          "independence_group": "synthetic-scouting.workflow_delta",
+          "locator": "https://example.org/novel-workflow/scouting.workflow_delta",
+          "observed_at": "2026-08-30",
+          "source_type": "manual_observation",
+          "summary": "Synthetic evidence supporting the scouting.workflow_delta scouting assessment."
+        }
+      ],
+      "notes": "Synthetic example; investigation priority is not an adoption verdict.",
+      "rating": 4,
+      "state": "observed"
+    }
+  },
+  "repository": "synthetic-labs/novel-workflow",
+  "schema_version": 1
+}

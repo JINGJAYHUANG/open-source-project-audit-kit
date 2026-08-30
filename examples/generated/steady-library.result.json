@@ -1,0 +1,291 @@
+{
+  "as_of": "2026-08-30",
+  "audit_id": "synthetic-steady-library-2026-08-30",
+  "base_recommendation": "adopt",
+  "coverage": 1.0,
+  "criteria": [
+    {
+      "confidence": 1.0,
+      "criterion_id": "provenance.identity",
+      "dimension": "Provenance",
+      "earned_points": 5.0,
+      "evidence_count": 1,
+      "note": "Synthetic example; not a claim about a real repository.",
+      "rating": 4,
+      "state": "observed",
+      "weight": 5.0
+    },
+    {
+      "confidence": 1.0,
+      "criterion_id": "provenance.source_traceability",
+      "dimension": "Provenance",
+      "earned_points": 5.0,
+      "evidence_count": 1,
+      "note": "Synthetic example; not a claim about a real repository.",
+      "rating": 4,
+      "state": "observed",
+      "weight": 5.0
+    },
+    {
+      "confidence": 1.0,
+      "criterion_id": "license.spdx_clarity",
+      "dimension": "License",
+      "earned_points": 6.0,
+      "evidence_count": 1,
+      "note": "Synthetic example; not a claim about a real repository.",
+      "rating": 4,
+      "state": "observed",
+      "weight": 6.0
+    },
+    {
+      "confidence": 1.0,
+      "criterion_id": "license.dependency_compatibility",
+      "dimension": "License",
+      "earned_points": 4.0,
+      "evidence_count": 1,
+      "note": "Synthetic example; not a claim about a real repository.",
+      "rating": 4,
+      "state": "observed",
+      "weight": 4.0
+    },
+    {
+      "confidence": 1.0,
+      "criterion_id": "maintenance.recency_response",
+      "dimension": "Maintenance",
+      "earned_points": 7.0,
+      "evidence_count": 1,
+      "note": "Synthetic example; not a claim about a real repository.",
+      "rating": 4,
+      "state": "observed",
+      "weight": 7.0
+    },
+    {
+      "confidence": 1.0,
+      "criterion_id": "maintenance.bus_factor_governance",
+      "dimension": "Maintenance",
+      "earned_points": 3.75,
+      "evidence_count": 1,
+      "note": "Synthetic example; not a claim about a real repository.",
+      "rating": 3,
+      "state": "observed",
+      "weight": 5.0
+    },
+    {
+      "confidence": 1.0,
+      "criterion_id": "documentation.quickstart",
+      "dimension": "Documentation",
+      "earned_points": 6.0,
+      "evidence_count": 1,
+      "note": "Synthetic example; not a claim about a real repository.",
+      "rating": 4,
+      "state": "observed",
+      "weight": 6.0
+    },
+    {
+      "confidence": 1.0,
+      "criterion_id": "documentation.operational_limits",
+      "dimension": "Documentation",
+      "earned_points": 6.0,
+      "evidence_count": 1,
+      "note": "Synthetic example; not a claim about a real repository.",
+      "rating": 4,
+      "state": "observed",
+      "weight": 6.0
+    },
+    {
+      "confidence": 1.0,
+      "criterion_id": "quality.tests_ci",
+      "dimension": "Quality",
+      "earned_points": 7.0,
+      "evidence_count": 1,
+      "note": "Synthetic example; not a claim about a real repository.",
+      "rating": 4,
+      "state": "observed",
+      "weight": 7.0
+    },
+    {
+      "confidence": 1.0,
+      "criterion_id": "quality.release_reproducibility",
+      "dimension": "Quality",
+      "earned_points": 7.0,
+      "evidence_count": 1,
+      "note": "Synthetic example; not a claim about a real repository.",
+      "rating": 4,
+      "state": "observed",
+      "weight": 7.0
+    },
+    {
+      "confidence": 1.0,
+      "criterion_id": "security.policy_disclosure",
+      "dimension": "Security",
+      "earned_points": 6.0,
+      "evidence_count": 1,
+      "note": "Synthetic example; not a claim about a real repository.",
+      "rating": 4,
+      "state": "observed",
+      "weight": 6.0
+    },
+    {
+      "confidence": 1.0,
+      "criterion_id": "security.permission_surface",
+      "dimension": "Security",
+      "earned_points": 5.0,
+      "evidence_count": 1,
+      "note": "Synthetic example; not a claim about a real repository.",
+      "rating": 4,
+      "state": "observed",
+      "weight": 5.0
+    },
+    {
+      "confidence": 1.0,
+      "criterion_id": "security.supply_chain_controls",
+      "dimension": "Security",
+      "earned_points": 4.0,
+      "evidence_count": 1,
+      "note": "Synthetic example; not a claim about a real repository.",
+      "rating": 4,
+      "state": "observed",
+      "weight": 4.0
+    },
+    {
+      "confidence": 1.0,
+      "criterion_id": "architecture.modularity_extensibility",
+      "dimension": "Architecture",
+      "earned_points": 6.0,
+      "evidence_count": 1,
+      "note": "Synthetic example; not a claim about a real repository.",
+      "rating": 4,
+      "state": "observed",
+      "weight": 6.0
+    },
+    {
+      "confidence": 1.0,
+      "criterion_id": "dependencies.hygiene_update_path",
+      "dimension": "Dependencies",
+      "earned_points": 6.0,
+      "evidence_count": 1,
+      "note": "Synthetic example; not a claim about a real repository.",
+      "rating": 4,
+      "state": "observed",
+      "weight": 6.0
+    },
+    {
+      "confidence": 1.0,
+      "criterion_id": "community.support_governance",
+      "dimension": "Community",
+      "earned_points": 7.0,
+      "evidence_count": 1,
+      "note": "Synthetic example; not a claim about a real repository.",
+      "rating": 4,
+      "state": "observed",
+      "weight": 7.0
+    },
+    {
+      "confidence": 1.0,
+      "criterion_id": "adoption.evidence",
+      "dimension": "Adoption",
+      "earned_points": 3.0,
+      "evidence_count": 1,
+      "note": "Synthetic example; not a claim about a real repository.",
+      "rating": 3,
+      "state": "observed",
+      "weight": 4.0
+    },
+    {
+      "confidence": 1.0,
+      "criterion_id": "fit.integration_cost",
+      "dimension": "Fit",
+      "earned_points": 3.0,
+      "evidence_count": 1,
+      "note": "Synthetic example; not a claim about a real repository.",
+      "rating": 3,
+      "state": "observed",
+      "weight": 4.0
+    }
+  ],
+  "dimensions": {
+    "Adoption": {
+      "coverage": 1.0,
+      "earned_points": 3.0,
+      "weight": 4.0
+    },
+    "Architecture": {
+      "coverage": 1.0,
+      "earned_points": 6.0,
+      "weight": 6.0
+    },
+    "Community": {
+      "coverage": 1.0,
+      "earned_points": 7.0,
+      "weight": 7.0
+    },
+    "Dependencies": {
+      "coverage": 1.0,
+      "earned_points": 6.0,
+      "weight": 6.0
+    },
+    "Documentation": {
+      "coverage": 1.0,
+      "earned_points": 12.0,
+      "weight": 12.0
+    },
+    "Fit": {
+      "coverage": 1.0,
+      "earned_points": 3.0,
+      "weight": 4.0
+    },
+    "License": {
+      "coverage": 1.0,
+      "earned_points": 10.0,
+      "weight": 10.0
+    },
+    "Maintenance": {
+      "coverage": 1.0,
+      "earned_points": 10.75,
+      "weight": 12.0
+    },
+    "Provenance": {
+      "coverage": 1.0,
+      "earned_points": 10.0,
+      "weight": 10.0
+    },
+    "Quality": {
+      "coverage": 1.0,
+      "earned_points": 14.0,
+      "weight": 14.0
+    },
+    "Security": {
+      "coverage": 1.0,
+      "earned_points": 15.0,
+      "weight": 15.0
+    }
+  },
+  "evidence_confidence": 1.0,
+  "gate_caps": [],
+  "observed_quality": 96.75,
+  "profile": "adoption-readiness",
+  "recommendation": "adopt",
+  "repository": "synthetic-labs/steady-library",
+  "schema_version": 1,
+  "score": 96.75,
+  "warnings": [
+    "provenance.identity: rating relies on one evidence item",
+    "provenance.source_traceability: rating relies on one evidence item",
+    "license.spdx_clarity: rating relies on one evidence item",
+    "license.dependency_compatibility: rating relies on one evidence item",
+    "maintenance.recency_response: rating relies on one evidence item",
+    "maintenance.bus_factor_governance: rating relies on one evidence item",
+    "documentation.quickstart: rating relies on one evidence item",
+    "documentation.operational_limits: rating relies on one evidence item",
+    "quality.tests_ci: rating relies on one evidence item",
+    "quality.release_reproducibility: rating relies on one evidence item",
+    "security.policy_disclosure: rating relies on one evidence item",
+    "security.permission_surface: rating relies on one evidence item",
+    "security.supply_chain_controls: rating relies on one evidence item",
+    "architecture.modularity_extensibility: rating relies on one evidence item",
+    "dependencies.hygiene_update_path: rating relies on one evidence item",
+    "community.support_governance: rating relies on one evidence item",
+    "adoption.evidence: rating relies on one evidence item",
+    "fit.integration_cost: rating relies on one evidence item"
+  ]
+}
