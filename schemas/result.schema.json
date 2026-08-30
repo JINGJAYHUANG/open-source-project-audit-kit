@@ -1,0 +1,154 @@
+{
+  "$defs": {
+    "criterion_score": {
+      "additionalProperties": false,
+      "properties": {
+        "confidence": {
+          "maximum": 1,
+          "minimum": 0,
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "criterion_id": {
+          "type": "string"
+        },
+        "dimension": {
+          "type": "string"
+        },
+        "earned_points": {
+          "type": "number"
+        },
+        "evidence_count": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "note": {
+          "type": "string"
+        },
+        "rating": {
+          "maximum": 4,
+          "minimum": 0,
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "state": {
+          "enum": [
+            "observed",
+            "unknown",
+            "not_applicable"
+          ],
+          "type": "string"
+        },
+        "weight": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "criterion_id",
+        "dimension",
+        "weight",
+        "state",
+        "rating",
+        "earned_points",
+        "evidence_count",
+        "confidence",
+        "note"
+      ],
+      "type": "object"
+    }
+  },
+  "$id": "https://example.org/open-source-audit/result.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "as_of": {
+      "format": "date",
+      "type": "string"
+    },
+    "audit_id": {
+      "type": "string"
+    },
+    "base_recommendation": {
+      "type": "string"
+    },
+    "coverage": {
+      "maximum": 1,
+      "minimum": 0,
+      "type": "number"
+    },
+    "criteria": {
+      "items": {
+        "$ref": "#/$defs/criterion_score"
+      },
+      "type": "array"
+    },
+    "dimensions": {
+      "additionalProperties": {
+        "type": "object"
+      },
+      "type": "object"
+    },
+    "evidence_confidence": {
+      "maximum": 1,
+      "minimum": 0,
+      "type": "number"
+    },
+    "gate_caps": {
+      "items": {
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "observed_quality": {
+      "maximum": 100,
+      "minimum": 0,
+      "type": "number"
+    },
+    "profile": {
+      "type": "string"
+    },
+    "recommendation": {
+      "type": "string"
+    },
+    "repository": {
+      "type": "string"
+    },
+    "schema_version": {
+      "const": 1
+    },
+    "score": {
+      "maximum": 100,
+      "minimum": 0,
+      "type": "number"
+    },
+    "warnings": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "schema_version",
+    "audit_id",
+    "repository",
+    "profile",
+    "as_of",
+    "score",
+    "observed_quality",
+    "coverage",
+    "evidence_confidence",
+    "recommendation",
+    "base_recommendation",
+    "gate_caps",
+    "dimensions",
+    "criteria",
+    "warnings"
+  ],
+  "title": "Open Source Audit Result",
+  "type": "object"
+}

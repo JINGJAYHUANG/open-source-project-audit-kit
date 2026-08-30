@@ -1,0 +1,187 @@
+name: Release
+
+on:
+  create:
+  push:
+    branches:
+      - "release/v*"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: open-source-project-audit-kit-release
+  cancel-in-progress: false
+
+jobs:
+  release:
+    if: >-
+      (github.event_name == 'create' && github.event.ref_type == 'branch' && startsWith(github.event.ref, 'release/v')) ||
+      (github.event_name == 'push' && startsWith(github.ref_name, 'release/v'))
+    name: Verify and publish
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    env:
+      PYTHONPATH: src
+    steps:
+      - name: Check out immutable candidate
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+          persist-credentials: true
+
+      - name: Set up Python 3.13
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.13"
+          cache: ""
+
+      - name: Confirm candidate equals current main
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin main --no-tags
+          test "$(git rev-parse HEAD)" = "$(git rev-parse origin/main)"
+
+      - name: Resolve and verify version
+        id: version
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [[ "$GITHUB_EVENT_NAME" == "create" ]]; then
+            release_ref="refs/heads/${{ github.event.ref }}"
+          else
+            release_ref="$GITHUB_REF_NAME"
+          fi
+          version="${release_ref#refs/heads/release/}"
+          version="${version#release/}"
+          [[ "$version" =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ ]]
+          project="$(python - <<'PY_VERSION'
+          import tomllib
+          from pathlib import Path
+
+          print(tomllib.loads(Path('pyproject.toml').read_text(encoding='utf-8'))['project']['version'])
+          PY_VERSION
+          )"
+          test "$version" = "v$project"
+          echo "value=$version" >> "$GITHUB_OUTPUT"
+
+      - name: Re-run release gate
+        run: python tools/release_check.py
+
+      - name: Install pinned build tooling
+        run: python -m pip install --disable-pip-version-check setuptools==80.9.0 wheel==0.45.1
+
+      - name: Configure tag identity
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Create or verify release tag
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          VERSION: ${{ steps.version.outputs.value }}
+        run: |
+          set -euo pipefail
+          head_sha="$(git rev-parse HEAD)"
+          if git ls-remote --exit-code --tags origin "refs/tags/$VERSION" >/dev/null 2>&1; then
+            git fetch origin "refs/tags/$VERSION:refs/tags/$VERSION" --force
+            tag_sha="$(git rev-list -n 1 "$VERSION")"
+            if [[ "$tag_sha" != "$head_sha" ]]; then
+              echo "refusing to move an existing release tag" >&2
+              exit 1
+            fi
+          else
+            git tag -a "$VERSION" -m "Open Source Project Audit Kit $VERSION" HEAD
+            git push origin "refs/tags/$VERSION"
+          fi
+
+      - name: Build and verify release assets
+        shell: bash
+        env:
+          VERSION: ${{ steps.version.outputs.value }}
+        run: |
+          set -euo pipefail
+          version="${VERSION#v}"
+          rm -rf dist
+          mkdir -p dist
+          prefix="open-source-project-audit-kit-${version}/"
+          git archive --format=tar --prefix="$prefix" HEAD \
+            | gzip -n > "dist/open-source-project-audit-kit-${version}.tar.gz"
+          git archive --format=zip --prefix="$prefix" HEAD \
+            > "dist/open-source-project-audit-kit-${version}.zip"
+          SOURCE_DATE_EPOCH="$(git show -s --format=%ct HEAD)" \
+            python -m pip wheel \
+              --disable-pip-version-check \
+              --no-deps \
+              --no-build-isolation \
+              --wheel-dir dist .
+          VERSION="$VERSION" python - <<'PY_PROVENANCE'
+          import json
+          import os
+          from pathlib import Path
+
+          rubric = json.loads(Path('data/rubric.json').read_text(encoding='utf-8'))
+          examples = list(Path('examples/synthetic').glob('*.audit.json'))
+          payload = {
+              'schema_version': 1,
+              'repository': os.environ['GITHUB_REPOSITORY'],
+              'tag': os.environ['VERSION'],
+              'commit': os.environ['GITHUB_SHA'],
+              'workflow_run_id': os.environ['GITHUB_RUN_ID'],
+              'workflow_run_attempt': os.environ['GITHUB_RUN_ATTEMPT'],
+              'profiles': len(rubric['profiles']),
+              'criteria_by_profile': {
+                  name: len(profile['criteria'])
+                  for name, profile in sorted(rubric['profiles'].items())
+              },
+              'hard_gates': len(rubric['gates']),
+              'synthetic_examples': len(examples),
+              'public_boundary_audit': 'passed',
+          }
+          Path('dist/RELEASE_PROVENANCE.json').write_text(
+              json.dumps(payload, indent=2, sort_keys=True) + '\n',
+              encoding='utf-8',
+          )
+          PY_PROVENANCE
+          (
+            cd dist
+            sha256sum \
+              "open-source-project-audit-kit-${version}.tar.gz" \
+              "open-source-project-audit-kit-${version}.zip" \
+              "open_source_project_audit_kit-${version}-py3-none-any.whl" \
+              RELEASE_PROVENANCE.json \
+              > SHA256SUMS.txt
+            sha256sum -c SHA256SUMS.txt
+          )
+
+      - name: Create or repair GitHub Release
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          VERSION: ${{ steps.version.outputs.value }}
+        run: |
+          set -euo pipefail
+          version="${VERSION#v}"
+          notes="docs/release-notes/${VERSION}.md"
+          test -f "$notes"
+          assets=(
+            "dist/open-source-project-audit-kit-${version}.tar.gz"
+            "dist/open-source-project-audit-kit-${version}.zip"
+            "dist/open_source_project_audit_kit-${version}-py3-none-any.whl"
+            "dist/SHA256SUMS.txt"
+            "dist/RELEASE_PROVENANCE.json"
+          )
+          if gh release view "$VERSION" >/dev/null 2>&1; then
+            gh release edit "$VERSION" \
+              --title "Open Source Project Audit Kit $VERSION" \
+              --notes-file "$notes"
+            gh release upload "$VERSION" "${assets[@]}" --clobber
+          else
+            gh release create "$VERSION" "${assets[@]}" \
+              --title "Open Source Project Audit Kit $VERSION" \
+              --notes-file "$notes" \
+              --verify-tag
+          fi

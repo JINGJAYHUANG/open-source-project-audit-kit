@@ -1,0 +1,322 @@
+{
+  "as_of": "2026-08-30",
+  "audit_id": "synthetic-abandoned-plugin-2026-08-30",
+  "base_recommendation": "avoid",
+  "coverage": 0.74,
+  "criteria": [
+    {
+      "confidence": 0.67,
+      "criterion_id": "provenance.identity",
+      "dimension": "Provenance",
+      "earned_points": 2.5,
+      "evidence_count": 1,
+      "note": "Synthetic example; not a claim about a real repository.",
+      "rating": 2,
+      "state": "observed",
+      "weight": 5.0
+    },
+    {
+      "confidence": 0.67,
+      "criterion_id": "provenance.source_traceability",
+      "dimension": "Provenance",
+      "earned_points": 1.25,
+      "evidence_count": 1,
+      "note": "Synthetic example; not a claim about a real repository.",
+      "rating": 1,
+      "state": "observed",
+      "weight": 5.0
+    },
+    {
+      "confidence": 1.0,
+      "criterion_id": "license.spdx_clarity",
+      "dimension": "License",
+      "earned_points": 0.0,
+      "evidence_count": 1,
+      "note": "Synthetic example; not a claim about a real repository.",
+      "rating": 0,
+      "state": "observed",
+      "weight": 6.0
+    },
+    {
+      "confidence": null,
+      "criterion_id": "license.dependency_compatibility",
+      "dimension": "License",
+      "earned_points": 0.0,
+      "evidence_count": 0,
+      "note": "Not established in this synthetic snapshot.",
+      "rating": null,
+      "state": "unknown",
+      "weight": 4.0
+    },
+    {
+      "confidence": 1.0,
+      "criterion_id": "maintenance.recency_response",
+      "dimension": "Maintenance",
+      "earned_points": 0.0,
+      "evidence_count": 1,
+      "note": "Synthetic example; not a claim about a real repository.",
+      "rating": 0,
+      "state": "observed",
+      "weight": 7.0
+    },
+    {
+      "confidence": null,
+      "criterion_id": "maintenance.bus_factor_governance",
+      "dimension": "Maintenance",
+      "earned_points": 0.0,
+      "evidence_count": 0,
+      "note": "Not established in this synthetic snapshot.",
+      "rating": null,
+      "state": "unknown",
+      "weight": 5.0
+    },
+    {
+      "confidence": 0.67,
+      "criterion_id": "documentation.quickstart",
+      "dimension": "Documentation",
+      "earned_points": 1.5,
+      "evidence_count": 1,
+      "note": "Synthetic example; not a claim about a real repository.",
+      "rating": 1,
+      "state": "observed",
+      "weight": 6.0
+    },
+    {
+      "confidence": null,
+      "criterion_id": "documentation.operational_limits",
+      "dimension": "Documentation",
+      "earned_points": 0.0,
+      "evidence_count": 0,
+      "note": "Not established in this synthetic snapshot.",
+      "rating": null,
+      "state": "unknown",
+      "weight": 6.0
+    },
+    {
+      "confidence": 1.0,
+      "criterion_id": "quality.tests_ci",
+      "dimension": "Quality",
+      "earned_points": 0.0,
+      "evidence_count": 1,
+      "note": "Synthetic example; not a claim about a real repository.",
+      "rating": 0,
+      "state": "observed",
+      "weight": 7.0
+    },
+    {
+      "confidence": null,
+      "criterion_id": "quality.release_reproducibility",
+      "dimension": "Quality",
+      "earned_points": 0.0,
+      "evidence_count": 0,
+      "note": "Not established in this synthetic snapshot.",
+      "rating": null,
+      "state": "unknown",
+      "weight": 7.0
+    },
+    {
+      "confidence": 1.0,
+      "criterion_id": "security.policy_disclosure",
+      "dimension": "Security",
+      "earned_points": 0.0,
+      "evidence_count": 1,
+      "note": "Synthetic example; not a claim about a real repository.",
+      "rating": 0,
+      "state": "observed",
+      "weight": 6.0
+    },
+    {
+      "confidence": 0.34,
+      "criterion_id": "security.permission_surface",
+      "dimension": "Security",
+      "earned_points": 1.25,
+      "evidence_count": 1,
+      "note": "Synthetic example; not a claim about a real repository.",
+      "rating": 1,
+      "state": "observed",
+      "weight": 5.0
+    },
+    {
+      "confidence": null,
+      "criterion_id": "security.supply_chain_controls",
+      "dimension": "Security",
+      "earned_points": 0.0,
+      "evidence_count": 0,
+      "note": "Not established in this synthetic snapshot.",
+      "rating": null,
+      "state": "unknown",
+      "weight": 4.0
+    },
+    {
+      "confidence": 0.34,
+      "criterion_id": "architecture.modularity_extensibility",
+      "dimension": "Architecture",
+      "earned_points": 1.5,
+      "evidence_count": 1,
+      "note": "Synthetic example; not a claim about a real repository.",
+      "rating": 1,
+      "state": "observed",
+      "weight": 6.0
+    },
+    {
+      "confidence": 0.67,
+      "criterion_id": "dependencies.hygiene_update_path",
+      "dimension": "Dependencies",
+      "earned_points": 0.0,
+      "evidence_count": 1,
+      "note": "Synthetic example; not a claim about a real repository.",
+      "rating": 0,
+      "state": "observed",
+      "weight": 6.0
+    },
+    {
+      "confidence": 0.67,
+      "criterion_id": "community.support_governance",
+      "dimension": "Community",
+      "earned_points": 0.0,
+      "evidence_count": 1,
+      "note": "Synthetic example; not a claim about a real repository.",
+      "rating": 0,
+      "state": "observed",
+      "weight": 7.0
+    },
+    {
+      "confidence": 0.34,
+      "criterion_id": "adoption.evidence",
+      "dimension": "Adoption",
+      "earned_points": 1.0,
+      "evidence_count": 1,
+      "note": "Synthetic example; not a claim about a real repository.",
+      "rating": 1,
+      "state": "observed",
+      "weight": 4.0
+    },
+    {
+      "confidence": 0.34,
+      "criterion_id": "fit.integration_cost",
+      "dimension": "Fit",
+      "earned_points": 1.0,
+      "evidence_count": 1,
+      "note": "Synthetic example; not a claim about a real repository.",
+      "rating": 1,
+      "state": "observed",
+      "weight": 4.0
+    }
+  ],
+  "dimensions": {
+    "Adoption": {
+      "coverage": 1.0,
+      "earned_points": 1.0,
+      "weight": 4.0
+    },
+    "Architecture": {
+      "coverage": 1.0,
+      "earned_points": 1.5,
+      "weight": 6.0
+    },
+    "Community": {
+      "coverage": 1.0,
+      "earned_points": 0.0,
+      "weight": 7.0
+    },
+    "Dependencies": {
+      "coverage": 1.0,
+      "earned_points": 0.0,
+      "weight": 6.0
+    },
+    "Documentation": {
+      "coverage": 0.5,
+      "earned_points": 1.5,
+      "weight": 12.0
+    },
+    "Fit": {
+      "coverage": 1.0,
+      "earned_points": 1.0,
+      "weight": 4.0
+    },
+    "License": {
+      "coverage": 0.6,
+      "earned_points": 0.0,
+      "weight": 10.0
+    },
+    "Maintenance": {
+      "coverage": 0.5833,
+      "earned_points": 0.0,
+      "weight": 12.0
+    },
+    "Provenance": {
+      "coverage": 1.0,
+      "earned_points": 3.75,
+      "weight": 10.0
+    },
+    "Quality": {
+      "coverage": 0.5,
+      "earned_points": 0.0,
+      "weight": 14.0
+    },
+    "Security": {
+      "coverage": 0.7333,
+      "earned_points": 1.25,
+      "weight": 15.0
+    }
+  },
+  "evidence_confidence": 0.7012,
+  "gate_caps": [
+    {
+      "after": "avoid",
+      "before": "avoid",
+      "cap": "avoid",
+      "gate": "license_permission_clear",
+      "status": "fail"
+    },
+    {
+      "after": "avoid",
+      "before": "avoid",
+      "cap": "pilot",
+      "gate": "no_unmitigated_critical_security_finding",
+      "status": "unknown"
+    },
+    {
+      "after": "avoid",
+      "before": "avoid",
+      "cap": "avoid",
+      "gate": "privileged_defaults_bounded",
+      "status": "fail"
+    },
+    {
+      "after": "avoid",
+      "before": "avoid",
+      "cap": "pilot",
+      "gate": "installation_reversible",
+      "status": "unknown"
+    },
+    {
+      "after": "avoid",
+      "before": "avoid",
+      "cap": "avoid",
+      "gate": "context_fit_confirmed",
+      "status": "fail"
+    }
+  ],
+  "observed_quality": 13.51,
+  "profile": "adoption-readiness",
+  "recommendation": "avoid",
+  "repository": "synthetic-labs/abandoned-plugin",
+  "schema_version": 1,
+  "score": 10.0,
+  "warnings": [
+    "provenance.identity: rating relies on one evidence item",
+    "provenance.source_traceability: rating relies on one evidence item",
+    "license.spdx_clarity: rating relies on one evidence item",
+    "maintenance.recency_response: rating relies on one evidence item",
+    "documentation.quickstart: rating relies on one evidence item",
+    "quality.tests_ci: rating relies on one evidence item",
+    "security.policy_disclosure: rating relies on one evidence item",
+    "security.permission_surface: rating relies on one evidence item",
+    "architecture.modularity_extensibility: rating relies on one evidence item",
+    "dependencies.hygiene_update_path: rating relies on one evidence item",
+    "community.support_governance: rating relies on one evidence item",
+    "adoption.evidence: rating relies on one evidence item",
+    "fit.integration_cost: rating relies on one evidence item"
+  ]
+}

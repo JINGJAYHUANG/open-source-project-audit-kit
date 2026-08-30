@@ -1,0 +1,366 @@
+{
+  "as_of": "2026-08-30",
+  "audit_id": "synthetic-steady-library-2026-08-30",
+  "auditor": {
+    "name": "Open Source Project Audit Kit",
+    "type": "synthetic-example"
+  },
+  "context": {
+    "environment": "disposable evaluation environment",
+    "risk_tolerance": "moderate",
+    "time_budget": "two days",
+    "use_case": "Evaluate a synthetic library for a reversible internal production dependency."
+  },
+  "disclosure": "All entities, evidence locators, dates, and scores in this file are synthetic.",
+  "gates": {
+    "context_fit_confirmed": {
+      "evidence": [
+        {
+          "confidence": "high",
+          "independence_group": "synthetic-gate-context_fit_confirmed",
+          "locator": "https://example.org/steady-library/gate/context_fit_confirmed",
+          "observed_at": "2026-08-30",
+          "source_type": "manual_observation",
+          "summary": "Synthetic evidence for gate context_fit_confirmed status pass."
+        }
+      ],
+      "notes": "Synthetic gate demonstration.",
+      "status": "pass"
+    },
+    "installation_reversible": {
+      "evidence": [
+        {
+          "confidence": "high",
+          "independence_group": "synthetic-gate-installation_reversible",
+          "locator": "https://example.org/steady-library/gate/installation_reversible",
+          "observed_at": "2026-08-30",
+          "source_type": "manual_observation",
+          "summary": "Synthetic evidence for gate installation_reversible status pass."
+        }
+      ],
+      "notes": "Synthetic gate demonstration.",
+      "status": "pass"
+    },
+    "license_permission_clear": {
+      "evidence": [
+        {
+          "confidence": "high",
+          "independence_group": "synthetic-gate-license_permission_clear",
+          "locator": "https://example.org/steady-library/gate/license_permission_clear",
+          "observed_at": "2026-08-30",
+          "source_type": "manual_observation",
+          "summary": "Synthetic evidence for gate license_permission_clear status pass."
+        }
+      ],
+      "notes": "Synthetic gate demonstration.",
+      "status": "pass"
+    },
+    "no_unmitigated_critical_security_finding": {
+      "evidence": [
+        {
+          "confidence": "high",
+          "independence_group": "synthetic-gate-no_unmitigated_critical_security_finding",
+          "locator": "https://example.org/steady-library/gate/no_unmitigated_critical_security_finding",
+          "observed_at": "2026-08-30",
+          "source_type": "manual_observation",
+          "summary": "Synthetic evidence for gate no_unmitigated_critical_security_finding status pass."
+        }
+      ],
+      "notes": "Synthetic gate demonstration.",
+      "status": "pass"
+    },
+    "privileged_defaults_bounded": {
+      "evidence": [
+        {
+          "confidence": "high",
+          "independence_group": "synthetic-gate-privileged_defaults_bounded",
+          "locator": "https://example.org/steady-library/gate/privileged_defaults_bounded",
+          "observed_at": "2026-08-30",
+          "source_type": "manual_observation",
+          "summary": "Synthetic evidence for gate privileged_defaults_bounded status pass."
+        }
+      ],
+      "notes": "Synthetic gate demonstration.",
+      "status": "pass"
+    }
+  },
+  "next_verification": [
+    "Repeat the sandbox test on the actual target platform.",
+    "Verify the next upstream release before production rollout."
+  ],
+  "profile": "adoption-readiness",
+  "ratings": {
+    "adoption.evidence": {
+      "evidence": [
+        {
+          "confidence": "high",
+          "independence_group": "synthetic-adoption",
+          "locator": "https://example.org/steady-library/adoption.evidence",
+          "observed_at": "2026-08-30",
+          "source_type": "manual_observation",
+          "summary": "Synthetic, dated evidence record supporting the adoption.evidence rating."
+        }
+      ],
+      "notes": "Synthetic example; not a claim about a real repository.",
+      "rating": 3,
+      "state": "observed"
+    },
+    "architecture.modularity_extensibility": {
+      "evidence": [
+        {
+          "confidence": "high",
+          "independence_group": "synthetic-architecture",
+          "locator": "https://example.org/steady-library/architecture.modularity_extensibility",
+          "observed_at": "2026-08-30",
+          "source_type": "manual_observation",
+          "summary": "Synthetic, dated evidence record supporting the architecture.modularity_extensibility rating."
+        }
+      ],
+      "notes": "Synthetic example; not a claim about a real repository.",
+      "rating": 4,
+      "state": "observed"
+    },
+    "community.support_governance": {
+      "evidence": [
+        {
+          "confidence": "high",
+          "independence_group": "synthetic-community",
+          "locator": "https://example.org/steady-library/community.support_governance",
+          "observed_at": "2026-08-30",
+          "source_type": "manual_observation",
+          "summary": "Synthetic, dated evidence record supporting the community.support_governance rating."
+        }
+      ],
+      "notes": "Synthetic example; not a claim about a real repository.",
+      "rating": 4,
+      "state": "observed"
+    },
+    "dependencies.hygiene_update_path": {
+      "evidence": [
+        {
+          "confidence": "high",
+          "independence_group": "synthetic-dependencies",
+          "locator": "https://example.org/steady-library/dependencies.hygiene_update_path",
+          "observed_at": "2026-08-30",
+          "source_type": "manual_observation",
+          "summary": "Synthetic, dated evidence record supporting the dependencies.hygiene_update_path rating."
+        }
+      ],
+      "notes": "Synthetic example; not a claim about a real repository.",
+      "rating": 4,
+      "state": "observed"
+    },
+    "documentation.operational_limits": {
+      "evidence": [
+        {
+          "confidence": "high",
+          "independence_group": "synthetic-documentation",
+          "locator": "https://example.org/steady-library/documentation.operational_limits",
+          "observed_at": "2026-08-30",
+          "source_type": "manual_observation",
+          "summary": "Synthetic, dated evidence record supporting the documentation.operational_limits rating."
+        }
+      ],
+      "notes": "Synthetic example; not a claim about a real repository.",
+      "rating": 4,
+      "state": "observed"
+    },
+    "documentation.quickstart": {
+      "evidence": [
+        {
+          "confidence": "high",
+          "independence_group": "synthetic-documentation",
+          "locator": "https://example.org/steady-library/documentation.quickstart",
+          "observed_at": "2026-08-30",
+          "source_type": "manual_observation",
+          "summary": "Synthetic, dated evidence record supporting the documentation.quickstart rating."
+        }
+      ],
+      "notes": "Synthetic example; not a claim about a real repository.",
+      "rating": 4,
+      "state": "observed"
+    },
+    "fit.integration_cost": {
+      "evidence": [
+        {
+          "confidence": "high",
+          "independence_group": "synthetic-fit",
+          "locator": "https://example.org/steady-library/fit.integration_cost",
+          "observed_at": "2026-08-30",
+          "source_type": "manual_observation",
+          "summary": "Synthetic, dated evidence record supporting the fit.integration_cost rating."
+        }
+      ],
+      "notes": "Synthetic example; not a claim about a real repository.",
+      "rating": 3,
+      "state": "observed"
+    },
+    "license.dependency_compatibility": {
+      "evidence": [
+        {
+          "confidence": "high",
+          "independence_group": "synthetic-license",
+          "locator": "https://example.org/steady-library/license.dependency_compatibility",
+          "observed_at": "2026-08-30",
+          "source_type": "manual_observation",
+          "summary": "Synthetic, dated evidence record supporting the license.dependency_compatibility rating."
+        }
+      ],
+      "notes": "Synthetic example; not a claim about a real repository.",
+      "rating": 4,
+      "state": "observed"
+    },
+    "license.spdx_clarity": {
+      "evidence": [
+        {
+          "confidence": "high",
+          "independence_group": "synthetic-license",
+          "locator": "https://example.org/steady-library/license.spdx_clarity",
+          "observed_at": "2026-08-30",
+          "source_type": "manual_observation",
+          "summary": "Synthetic, dated evidence record supporting the license.spdx_clarity rating."
+        }
+      ],
+      "notes": "Synthetic example; not a claim about a real repository.",
+      "rating": 4,
+      "state": "observed"
+    },
+    "maintenance.bus_factor_governance": {
+      "evidence": [
+        {
+          "confidence": "high",
+          "independence_group": "synthetic-maintenance",
+          "locator": "https://example.org/steady-library/maintenance.bus_factor_governance",
+          "observed_at": "2026-08-30",
+          "source_type": "manual_observation",
+          "summary": "Synthetic, dated evidence record supporting the maintenance.bus_factor_governance rating."
+        }
+      ],
+      "notes": "Synthetic example; not a claim about a real repository.",
+      "rating": 3,
+      "state": "observed"
+    },
+    "maintenance.recency_response": {
+      "evidence": [
+        {
+          "confidence": "high",
+          "independence_group": "synthetic-maintenance",
+          "locator": "https://example.org/steady-library/maintenance.recency_response",
+          "observed_at": "2026-08-30",
+          "source_type": "manual_observation",
+          "summary": "Synthetic, dated evidence record supporting the maintenance.recency_response rating."
+        }
+      ],
+      "notes": "Synthetic example; not a claim about a real repository.",
+      "rating": 4,
+      "state": "observed"
+    },
+    "provenance.identity": {
+      "evidence": [
+        {
+          "confidence": "high",
+          "independence_group": "synthetic-provenance",
+          "locator": "https://example.org/steady-library/provenance.identity",
+          "observed_at": "2026-08-30",
+          "source_type": "manual_observation",
+          "summary": "Synthetic, dated evidence record supporting the provenance.identity rating."
+        }
+      ],
+      "notes": "Synthetic example; not a claim about a real repository.",
+      "rating": 4,
+      "state": "observed"
+    },
+    "provenance.source_traceability": {
+      "evidence": [
+        {
+          "confidence": "high",
+          "independence_group": "synthetic-provenance",
+          "locator": "https://example.org/steady-library/provenance.source_traceability",
+          "observed_at": "2026-08-30",
+          "source_type": "manual_observation",
+          "summary": "Synthetic, dated evidence record supporting the provenance.source_traceability rating."
+        }
+      ],
+      "notes": "Synthetic example; not a claim about a real repository.",
+      "rating": 4,
+      "state": "observed"
+    },
+    "quality.release_reproducibility": {
+      "evidence": [
+        {
+          "confidence": "high",
+          "independence_group": "synthetic-quality",
+          "locator": "https://example.org/steady-library/quality.release_reproducibility",
+          "observed_at": "2026-08-30",
+          "source_type": "manual_observation",
+          "summary": "Synthetic, dated evidence record supporting the quality.release_reproducibility rating."
+        }
+      ],
+      "notes": "Synthetic example; not a claim about a real repository.",
+      "rating": 4,
+      "state": "observed"
+    },
+    "quality.tests_ci": {
+      "evidence": [
+        {
+          "confidence": "high",
+          "independence_group": "synthetic-quality",
+          "locator": "https://example.org/steady-library/quality.tests_ci",
+          "observed_at": "2026-08-30",
+          "source_type": "manual_observation",
+          "summary": "Synthetic, dated evidence record supporting the quality.tests_ci rating."
+        }
+      ],
+      "notes": "Synthetic example; not a claim about a real repository.",
+      "rating": 4,
+      "state": "observed"
+    },
+    "security.permission_surface": {
+      "evidence": [
+        {
+          "confidence": "high",
+          "independence_group": "synthetic-security",
+          "locator": "https://example.org/steady-library/security.permission_surface",
+          "observed_at": "2026-08-30",
+          "source_type": "manual_observation",
+          "summary": "Synthetic, dated evidence record supporting the security.permission_surface rating."
+        }
+      ],
+      "notes": "Synthetic example; not a claim about a real repository.",
+      "rating": 4,
+      "state": "observed"
+    },
+    "security.policy_disclosure": {
+      "evidence": [
+        {
+          "confidence": "high",
+          "independence_group": "synthetic-security",
+          "locator": "https://example.org/steady-library/security.policy_disclosure",
+          "observed_at": "2026-08-30",
+          "source_type": "manual_observation",
+          "summary": "Synthetic, dated evidence record supporting the security.policy_disclosure rating."
+        }
+      ],
+      "notes": "Synthetic example; not a claim about a real repository.",
+      "rating": 4,
+      "state": "observed"
+    },
+    "security.supply_chain_controls": {
+      "evidence": [
+        {
+          "confidence": "high",
+          "independence_group": "synthetic-security",
+          "locator": "https://example.org/steady-library/security.supply_chain_controls",
+          "observed_at": "2026-08-30",
+          "source_type": "manual_observation",
+          "summary": "Synthetic, dated evidence record supporting the security.supply_chain_controls rating."
+        }
+      ],
+      "notes": "Synthetic example; not a claim about a real repository.",
+      "rating": 4,
+      "state": "observed"
+    }
+  },
+  "repository": "synthetic-labs/steady-library",
+  "schema_version": 1
+}

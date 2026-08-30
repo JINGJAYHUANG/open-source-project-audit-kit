@@ -1,0 +1,21 @@
+name: Bug report
+description: Report a deterministic validation, scoring, collector, or report bug.
+title: "bug: "
+body:
+  - type: textarea
+    attributes:
+      label: Reproduction
+      description: Include the smallest public-safe or synthetic input.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Expected and actual result
+    validations:
+      required: true
+  - type: checkboxes
+    attributes:
+      label: Public boundary
+      options:
+        - label: I removed tokens, private repository content, personal data, and proprietary evidence.
+          required: true

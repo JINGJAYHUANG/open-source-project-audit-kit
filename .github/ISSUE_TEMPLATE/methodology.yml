@@ -1,0 +1,21 @@
+name: Methodology proposal
+description: Propose a rubric, gate, threshold, or evidence-model change.
+title: "methodology: "
+body:
+  - type: textarea
+    attributes:
+      label: Decision problem
+      description: What decision is not handled correctly today?
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Evidence and fixtures
+      description: Provide public or synthetic evidence plus positive and negative cases.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Failure and gaming risks
+    validations:
+      required: true
